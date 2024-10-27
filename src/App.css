@@ -88,3 +88,83 @@ body {
 .contentModal button:hover {
   background-color: #d32f2f; /* 닫기 버튼 hover 효과 */
 }
+
+.list div {
+  display: flex;
+  justify-content: flex-end; /* 버튼들을 오른쪽 정렬 */
+  gap: 10px; /* 버튼 사이 간격 */
+  margin-top: 10px; /* 버튼과 위 내용 사이의 여백 */
+}
+
+.list button {
+  background-color: #4caf50; /* 버튼 배경색 */
+  color: white;
+  border: none;
+  border-radius: 10px; /* 동글동글한 모서리 */
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9em;
+}
+
+.list button:hover {
+  background-color: #388e3c; /* 호버 시 어두운 연두색 */
+}
+
+/* AddModal 컴포넌트 전용 스타일 */
+.addModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff; /* 배경색 */
+  border-radius: 15px; /* 동글동글한 모서리 */
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* 모달이 다른 요소 위에 표시되도록 */
+  width: 90%; /* 모달 너비 */
+  max-width: 500px; /* 최대 너비 */
+}
+
+.addModal h2 {
+  color: #4caf50; /* 제목 색상 */
+  text-align: center; /* 중앙 정렬 */
+  margin-bottom: 20px; /* 아래 여백 */
+}
+
+.addModal input,
+.addModal textarea {
+  width: calc(100% - 20px); /* 전체 너비에서 여백을 뺀 너비 */
+  padding: 10px;
+  border: 1px solid #c8e6c9; /* 테두리 색상 */
+  border-radius: 10px; /* 동글동글한 모서리 */
+  outline: none; /* 테두리 포커스 아웃라인 제거 */
+  margin-bottom: 15px; /* 입력 필드 간 여백 */
+  font-size: 1em; /* 폰트 크기 */
+  transition: border-color 0.3s; /* 부드러운 테두리 색상 전환 */
+}
+
+.addModal input:focus,
+.addModal textarea:focus {
+  border-color: #4caf50; /* 포커스 시 테두리 색상 */
+}
+
+.addModal button {
+  background-color: #4caf50; /* 버튼 색상 */
+  color: white;
+  border: none;
+  border-radius: 10px; /* 동글동글한 모서리 */
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* 부드러운 배경색 전환 */
+  width: 48%; /* 버튼 너비 */
+  margin: 0 1% 0 0; /* 오른쪽 버튼과 여백 */
+}
+
+.addModal button:last-of-type {
+  margin-right: 0; /* 마지막 버튼의 오른쪽 여백 제거 */
+}
+
+.addModal button:hover {
+  background-color: #388e3c; /* 호버 시 버튼 색상 */
+}
